@@ -1,6 +1,6 @@
 settings:
-  title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  title: 'ITI Status Page'
+  url: 'https://status.itimsp.com' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: false # experimental feature, enable only for <5 monitors or on paid plans
@@ -15,23 +15,64 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: na-myconnectwise-net # unique identifier
+    name: Connectwise
+    #description: 'You write code. They handle the rest.' # default=empty
+    url: 'https://na.myconnectwise.net/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: auth-connectwise-com
+    name: Connectwise Authentication
+    url: 'https://auth.connectwise.com/Account/Login'
     method: GET
     expectStatus: 200
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: home-connectwise-com
+    name: Connectwise Home
+    url: 'https://home.connectwise.com/'
+    method: GET
+    expectStatus: 200
+
+  - id: itimsp-screenconnect-com
+    name: ITI ScreenConnect
+    url: 'https://itimsp.screenconnect.com/'
+    method: GET
+    expectStatus: 200
+    
+  - id: integratedtech-hostedrmm-com
+    name: Automate Main
+    url: 'https://integratedtech.hostedrmm.com/WCC2/Home/Login'
+    method: GET
+    expectStatus: 200
+    
+  - id: integratedtech-hostedrmm-com-automate
+    name: Automate Technician
+    url: 'https://integratedtech.hostedrmm.com/automate/login'
+    method: GET
+    expectStatus: 200
+    
+  - id: itimsp-itglue-com
+    name: ITI ITGlue
+    url: 'https://itimsp.itglue.com/'
+    method: GET
+    expectStatus: 200
+    
+  - id: login-microsoftonline-com
+    name: Microsoft Authentication
+    url: 'https://login.microsoftonline.com/'
+    method: GET
+    expectStatus: 200
+    
+  - id: admin-microsoft-com
+    name: Microsoft Admin Portal
+    url: 'https://admin.microsoft.com/AdminPortal/Home#/homepage'
+    method: GET
+    expectStatus: 200
+    
+  - id: app-dnsfilter-com
+    name: DNSFilter Portal
+    url: 'https://app.dnsfilter.com/login'
     method: GET
     expectStatus: 200
