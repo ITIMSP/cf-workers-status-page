@@ -53,17 +53,12 @@ monitors:
     method: GET
     expectStatus: 200
     
-  - id: itimsp-itglue-com
-    name: ITI ITGlue
-    url: 'https://itimsp.itglue.com/'
-    method: GET
-    expectStatus: 200
-    
   - id: login-microsoftonline-com
     name: Microsoft Authentication
     url: 'https://login.microsoftonline.com/'
     method: GET
     expectStatus: 200
+    followRedirect: true
     
   - id: admin-microsoft-com
     name: Microsoft Admin Portal
